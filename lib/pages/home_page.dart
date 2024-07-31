@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodie/components/current_location.dart';
 import 'package:foodie/components/custom_drawer.dart';
 import 'package:foodie/components/custom_sliver_app_bar.dart';
 
@@ -19,7 +20,16 @@ class _HomePageState extends State<HomePage> {
           CustomSliverAppBar(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [Text("LOOL")],
+                children: [
+                  Divider(
+                    indent: 25,
+                    endIndent: 25,
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
+
+                  // Current location
+                  CurrentLocation()
+                ],
               ),
               title: Text('title'))
         ],
